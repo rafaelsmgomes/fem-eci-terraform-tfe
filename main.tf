@@ -17,9 +17,14 @@ module "workspace" {
 
   description       = each.value.description
   name              = each.key
-  execution_mode    = "local"
+  execution_mode    = each.value.execution_mode
   organization_name = var.organization_name
   project_id        = each.value.project_id
+
+  vcs_repo = {
+    github_app_installation_id = data.tfe_github_app_installation.this.id
+    identifier                 = each.value.vcs_repo_identifier
+  }
 }
 
 moved {
