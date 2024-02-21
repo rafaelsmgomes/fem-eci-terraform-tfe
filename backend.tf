@@ -3,7 +3,7 @@ terraform {
     organization = "valuemap"
 
     workspaces {
-      name = "fem-eci-workspace"
+      name = "fem-eci-tfe"
     }
   }
 }
