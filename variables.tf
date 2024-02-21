@@ -8,7 +8,7 @@ variable "github_app_installation_id"{
   type   = number
 }
 
-variable "gihub_organization_name" {
+variable "github_organization_name" {
   default = "rafaelsmgomes"
   type   = string
 }
